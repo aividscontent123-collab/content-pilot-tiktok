@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/api/telegram/webhook", "destination": "/api/tg" },
+    { "source": "/telegram/webhook", "destination": "/api/tg" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}
